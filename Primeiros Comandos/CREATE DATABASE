@@ -1,3 +1,5 @@
+### COMANDO PADRÃO SQL:
+---------------------------------------------------------------------------------------------------------------------------------
 postgres=# CREATE DATABASE mydatabase;
 CREATE DATABASE
 postgres=# \l  <--- ('\l' - Contra barra 'L' para listar os bancos de dados existentes:
