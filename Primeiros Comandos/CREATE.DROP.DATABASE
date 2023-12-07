@@ -22,4 +22,17 @@ postgres-# current_date;
 ------------------------------------------------------------
  PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
 (1 registro)
-
+=============================================================================================================================================================
+postgres=# DROP DATABASE mydatabase;
+DROP DATABASE
+postgres=# \l
+                                                                Lista dos bancos de dados
+   Nome    |   Dono   | CodificaþÒo | Locale Provider |        Collate         |         Ctype          | ICU Locale | ICU Rules | PrivilÚgios de acesso
+-----------+----------+-------------+-----------------+------------------------+------------------------+------------+-----------+-----------------------
+ postgres  | postgres | UTF8        | libc            | Portuguese_Brazil.1252 | Portuguese_Brazil.1252 |            |           |
+ template0 | postgres | UTF8        | libc            | Portuguese_Brazil.1252 | Portuguese_Brazil.1252 |            |           | =c/postgres          +
+           |          |             |                 |                        |                        |            |           | postgres=CTc/postgres
+ template1 | postgres | UTF8        | libc            | Portuguese_Brazil.1252 | Portuguese_Brazil.1252 |            |           | =c/postgres          +
+           |          |             |                 |                        |                        |            |           | postgres=CTc/postgres
+(3 registros)
+============================================================================================================================================================
