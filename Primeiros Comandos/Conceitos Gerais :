@@ -1,0 +1,48 @@
+Curso de Banco de Dados - POSTGRESQL - GRANCURSOS - Prof.Washington Almeida -
+
+	CONCEITOS GERAIS:
+	- Um pouco diferente do SGBDS tradicionais por que é o SGBDRO ( relacionado a objetos ) desenvolvido na Universidade da Califórnia do Depart Ciência
+da Computação da Berkeley. É o 4º mais utilizado no mundo: https://db-engines.com/en/ranking - Nov/2019.
+	- Querys complexas, chaves estrangeiras, triggers,, views, Multiversion Concurrency Controle.
+	- Pode ser distribuido gratuitamente para qualquer fim, é um projeto de código aberto. 
+	- * Sem custo de licenciamento **.
+	- Licença PostgreSQl própria -
+	- Write-Ahead Logging(WAL) para garantir a integridade de dados e logging de transações.
+	- SUporta múltiplos tipos de índices (B-tree,rTree,Hash) permitindo a escolha do índice mais eficiente para cada aplicação.
+	- Linguagem Procedural - A própria (PL/pgSQL), PL/Python, PL/JAVA, PL,PERL, PL/C,C++ PARA procedimentos armazenados.
+	- Suporte para replicação Master-Slave e arquitetura completa para rede cliente-servidor.
+		- PGAdmin - interface gráfica - 
+	- DICAS instalação: Porta padrão é 5432, no entanto, isso pode ser facilmente alterado.
+		- Arquitetura modelo de arquitetura clássica de cliente/servidor:
+			- Necessário que o SERVIDOR gerencie os arquivos do BD, conexões das aplicações clientes ao BD e executar ações. O processo de BD é chamado de postgres.
+	- Já aplicação cliente deseja executar operações de BD que podem ser de naturezas diversas, como aplicativo gráfico (PGadmin), páginas WEB e ferramentas
+especializadas de manuntenção do BD.
+	- O servidor PostgreSQL pode ligar com várias conexões simultâneas de clientes. 
+	- O servidor sempre estará em execução aguardadndo conexões de clientes.
+
+CLIENT: APLICAÇÕES, LIBRARYS
+SERVER PROCESSES: - postmarter(daemon), backend --> disk-buffers <---> Kernel disk buffers<< >> DISK, tables<----SHARED 
+
+2019- CESPE - TJ-AM-ASSIST.JUD.:
+	- Um SGBD trata do acesso ao BD e pode ser executado independentemente pelo Oracle, MySQL ou PostgreeSQL, no entanto, cada SGBD utiliza DML e DDL específicas.
+[CORRETO] - [CADA BANCO EM SUAS PLs EXISTEM VARIAÇÕES QUE FOGEM DO PADRÃO - PORTANTO EXISTEM DDL E DML ESPECÍFICAS DE CADA BANCO.]
+
+-=-----------------------------------------------------------------------------------------------------------------------------------------
+REGRAS DE NOMEAÇÃO:
+	- Ao criar um objeto, como um 'database','coluna' ou 'tabela' o nome deve ser atribuído. O tipo de dado único deve ser definido>
+		- O nome pode ter seguência de 63 ou menos. Sendo que o BD irá armazenar 63 caracteres, sendo o restante descartado.
+		- O padrão SQL e o PostgreSQL reservam algumas palavras, sendo assim, algumas palavras não podem ser nomeadas:
+			Exemplo: INTEGER ou BETWEEN, CREATE.
+		- O PostgreSQL aceita com aspas duplas para criar um objeto para não atender as regras.
+			Sendo assim, ao fazer referência á esse nome que não atenda as regras, sempre colocar entre aspas. "".
+		obs:*** Os nomes criados com aspas são case-sensitive, exemplo: "1020Home" e "1020HOME" são diferentes.
+		**** NOMES CRIADOS SEM ASPAS, TODOS OS SEUS CARACTERES ALFABÉTICOS SÃO CONVERTIDOS PARA MINÚSCULOS. ***
+			Exemplos de nomes válidos e inválidos:
+				- my_tabel -- válido
+				- my_2nd_table -- válido
+				- échéns - válido -- acentuação e letras não latinas são permitidas
+				- "2nd_table" ---- válido: identifiador de aspas
+				- " createtable" ---- válido: identificador de aspas
+				- "1040foRms" -- válido: identificador com aspas
+				- 2nd_table --- INVÁLIDO: NÃO PODE INICIAR COM NÚMEROS
+*** todo banco de dados deve ter nomes exclusivos ***
