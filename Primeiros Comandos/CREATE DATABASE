@@ -12,3 +12,14 @@ postgres=# \l  <--- ('\l' - Contra barra 'L' para listar os bancos de dados exis
             |          |             |                 |                        |                        |            |           | postgres=CTc/postgres
  template1  | postgres | UTF8        | libc            | Portuguese_Brazil.1252 | Portuguese_Brazil.1252 |            |           | =c/postgres          +
             |          |             |                 |                        |                        |            |           | postgres=CTc/postgres(4 registros)
+=================================================================================================================================================
+### INFORMAÇÕES IMPORTANTES:
+**** postgres-# é o usuário.   --- current_date : Comando para verificar a data do atual documento vigente a qual é o próprio software, no entanto, se selecionarmos 
+algum banco de dados com o seu nome declarado o resultado será diferente.
+
+postgres-# current_date;
+                        current_date
+------------------------------------------------------------
+ PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+(1 registro)
+
