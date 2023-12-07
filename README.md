@@ -3,7 +3,7 @@
 
 _Conceitos relativos os banco de dados PostgreSQL:_
 ****
-Link para download do PostgreeSQL para WINDOWS:
+_Link para download do PostgreeSQL para WINDOWS:_
 https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
 ****
 # Para Windows é necessário fazer algumas configurações:
