@@ -42,3 +42,55 @@ Ajuda disponÝvel:
   ALTER TYPE                       DROP TABLESPACE
   ALTER USER                       DROP TEXT SEARCH CONFIGURATION
   ALTER USER MAPPING               DROP TEXT SEARCH DICTIONARY
+ ALTER VIEW                       DROP TEXT SEARCH PARSER
+  ANALYZE                          DROP TEXT SEARCH TEMPLATE
+  BEGIN                            DROP TRANSFORM
+  CALL                             DROP TRIGGER
+  CHECKPOINT                       DROP TYPE
+  CLOSE                            DROP USER
+  CLUSTER                          DROP USER MAPPING
+  COMMENT                          DROP VIEW
+  COMMIT                           END
+  COMMIT PREPARED                  EXECUTE
+  COPY                             EXPLAIN
+  CREATE ACCESS METHOD             FETCH
+  CREATE AGGREGATE                 GRANT
+  CREATE CAST                      IMPORT FOREIGN SCHEMA
+  CREATE COLLATION                 INSERT
+  CREATE CONVERSION                LISTEN
+  CREATE DATABASE                  LOAD
+  CREATE DOMAIN                    LOCK
+  CREATE EVENT TRIGGER             MERGE
+  CREATE EXTENSION                 MOVE
+  CREATE FOREIGN DATA WRAPPER      NOTIFY
+  CREATE FOREIGN TABLE             PREPARE
+  CREATE FUNCTION                  PREPARE TRANSACTION
+  CREATE GROUP                     REASSIGN OWNED
+  CREATE INDEX                     REFRESH MATERIALIZED VIEW
+  CREATE LANGUAGE                  REINDEX
+  CREATE MATERIALIZED VIEW         RELEASE SAVEPOINT
+  CREATE OPERATOR                  RESET
+  CREATE OPERATOR CLASS            REVOKE
+  CREATE OPERATOR FAMILY           ROLLBACK
+  CREATE POLICY                    ROLLBACK PREPARED
+  CREATE PROCEDURE                 ROLLBACK TO SAVEPOINT
+  CREATE PUBLICATION               SAVEPOINT
+  CREATE ROLE                      SECURITY LABEL
+  CREATE RULE                      SELECT
+  CREATE SCHEMA                    SELECT INTO
+  CREATE SEQUENCE                  SET
+  CREATE SERVER                    SET CONSTRAINTS
+  CREATE STATISTICS                SET ROLE
+  CREATE SUBSCRIPTION              SET SESSION AUTHORIZATION
+  CREATE TABLE                     SET TRANSACTION
+  CREATE TABLE AS                  SHOW
+  CREATE TABLESPACE                START TRANSACTION
+  CREATE TEXT SEARCH CONFIGURATION TABLE
+  CREATE TEXT SEARCH DICTIONARY    TRUNCATE
+  CREATE TEXT SEARCH PARSER        UNLISTEN
+  CREATE TEXT SEARCH TEMPLATE      UPDATE
+  CREATE TRANSFORM                 VACUUM
+  CREATE TRIGGER                   VALUES
+  CREATE TYPE                      WITH
+  CREATE USER
+======================================================================================
