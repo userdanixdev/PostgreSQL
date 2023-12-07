@@ -6,7 +6,7 @@ _Conceitos relativos os banco de dados PostgreSQL:_
 _Link para download do PostgreeSQL do software:_
 https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
 ****
-# Para Windows é necessário fazer algumas configurações:
+# Aferi-se a necessidade de realizar algumas configurações:
 ***
  __Configurar as variáveis de ambiente de acesso no Sistema Operacional Windows:__
 1. Encontrar o diretório do software PostgreSQL:  `C:\Program Files\PostgreSQL\14` & criar a variável com o nome: `pgpath` em:
