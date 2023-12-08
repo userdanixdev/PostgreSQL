@@ -50,9 +50,8 @@ Ivp4 & Ipv6 de `scram-sha-256` para `trust`:
 ****
 ### Problemas com Portas para conexão com Servidor:
 * Por padrão é utilizada a porta: `5432`, porém, caso ela estiver em uso por outro BD será necessário mudá-la.
-* Acesso a pasta : `C:\Program Files\PostgreSQL\16\data` do arquivo `CONF` ----> nome: `postgreSQL` e mude a porta para `5433`.
-* Altere o PGadmin para a porta `5433`.
-* Entre em propriedades so servidor `PostgreSQL16` e altere a porta também para `5433` para se conectar com o servidor através do `PGAdmin`.
-* 
-
+* Acesse a pasta : `C:\Program Files\PostgreSQL\16\data` do arquivo `CONF` ----> nome: `postgreSQL` e mude a porta para `5433`, dentro do arquivo e salve.
+* Altere o PGadmin, em caso de problemas de autenticação, para a porta `5433`.
+* Entre em propriedades do servidor `PostgreSQL16`, na interface gráfica, e altere a porta também para `5433` para se conectar com o servidor através do `PGAdmin`.
+  ***
 
