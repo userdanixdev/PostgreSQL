@@ -1,0 +1,141 @@
+postgres=# \?
+Geral
+  \bind [PARAM]...       set query parameters
+  \copyright             mostra termos de uso e distribuiþÒo do PostgreSQL
+  \crosstabview [COLUMNS] execute query and display result in crosstab
+  \errverbose            mostra mensagem de erro mais recente com detalhamento mßximo
+  \g [(OPTIONS)] [FILE]  execute query (and send result to file or |pipe);
+                         \g with no arguments is equivalent to a semicolon
+  \gdesc                 describe result of query, without executing it
+  \gexec                 executa consulta, em seguida, executa cada valor no seu resultado
+  \gset [PREFIX]         execute query and store result in psql variables
+  \gx [(OPTIONS)] [FILE] as \g, but forces expanded output mode
+  \q                     sair do psql
+  \watch [[i=]SEC] [c=N] execute query every SEC seconds, up to N times
+
+Ajuda
+  \? [commands]          mostra ajuda sobre comandos de barra invertida
+  \? options             mostra ajuda sobre opþ§es de linha de comando do psql
+  \? variables           mostra ajuda sobre varißveis especiais
+  \h [NOME]              mostra sintaxe dos comandos SQL, * para todos os comandos
+
+Buffer de consulta
+  \e [ARQUIVO] [LINHA]    edita o buffer de consulta (ou arquivo) com um editor externo
+  \ef [NOMEFUNÃ├O [LINHA]] edita a definiþÒo de funþÒo com um editor externo
+  \ev [NOMEVIS├O [LINHA]] edita a definiþÒo de visÒo com um editor externo
+  \p                     mostra o conte·do do buffer de consulta
+  \r                     reinicia (apaga) o buffer de consulta
+  \w [ARQUIVO]           escreve o buffer de consulta para arquivo
+
+Entrada/SaÝda
+  \copy ...              realiza comando SQL COPY dos dados para mßquina cliente
+  \echo [-n] [STRING]    write string to standard output (-n for no newline)
+  \i ARQUIVO             executa comandos de um arquivo
+  \ir ARQUIVO            como \i, mas relativo ao local do script atual
+  \o [ARQUIVO]           envia todos os resultados da consulta para arquivo ou |pipe
+  \qecho [-n] [STRING]   write string to \o output stream (-n for no newline)
+  \warn [-n] [STRING]    write string to standard error (-n for no newline)
+
+Conditional
+  \if EXPR               begin conditional block
+  \elif EXPR             alternative within current conditional block
+  \else                  final alternative within current conditional block
+  \endif                 end conditional block
+
+Informativo
+  (opþ§es: S = mostra objetos do sistema, + = detalhes)
+  \d[S+]                 lista tabelas, vis§es e sequÛncias
+  \d[S+]  NOME           descreve tabela, visÒo, sequÛncia ou Ýndice
+  \da[S]  [MODELO]       lista funþ§es de agregaþÒo
+  \dA[+]  [MODELO]       lista mÚtodos de acesso
+  \dAc[+] [AMPTRN [TYPEPTRN]]  list operator classes
+  \dAf[+] [AMPTRN [TYPEPTRN]]  list operator families
+  \dAo[+] [AMPTRN [OPFPTRN]]   list operators of operator families
+  \dAp[+] [AMPTRN [OPFPTRN]]   list support functions of operator families
+  \db[+]  [MODELO]       lista tablespaces
+  \dc[S+]  [MODELO]      lista convers§es
+  \dconfig[+] [PATTERN]  list configuration parameters
+  \dC[+]  [MODELO]       lista convers§es de tipos
+  \dd[S]  [MODELO]       mostra comentßrios de objetos que nÒo aparecem em outro lugar
+  \dD[S+] [MODELO]       lista domÝnios
+  \ddp    [MODELO]       lista privilÚgios padrÒo
+  \dE[S+] [MODELO]       lista tabelas externas
+  \des[+] [MODELO]       lista servidores externos
+  \det[+] [MODELO]       lista tabelas externas
+  \deu[+] [MODELO]       lista mapeamento de usußrios
+  \dew[+] [MODELO]       lista adaptadores de dados externos
+  \df[anptw][S+] [FUNCPTRN [TYPEPTRN ...]]
+                         list [only agg/normal/procedure/trigger/window] functions
+  \dF[+]  [MODELO]       lista configuraþ§es de busca textual
+  \dFd[+] [MODELO]       lista dicionßrios de busca textual
+  \dFp[+] [MODELO]       lista analisadores de busca textual
+  \dFt[+] [MODELO]       lista modelos de busca textual
+  \dg[S+] [MODELO]       lista roles
+  \di[S+] [MODELO]       lista Ýndices
+  \dl[+]                 list large objects, same as \lo_list
+  \dL[S+] [MODELO]       lista linguagens procedurais
+  \dm[S+] [MODELO]       lista vis§es materializadas
+  \dn[S+] [MODELO]       lista esquemas
+  \do[S+] [OPPTRN [TYPEPTRN [TYPEPTRN]]]
+                         list operators
+  \dO[S+] [MODELO]       lista ordenaþ§es
+  \dp[S]  [PATTERN]      list table, view, and sequence access privileges
+  \dP[itn+] [PATTERN]    list [only index/table] partitioned relations [n=nested]
+  \drds [ROLEPTRN [DBPTRN]] list per-database role settings
+  \drg[S] [PATTERN]      list role grants
+  \dRp[+] [PATTERN]      list replication publications
+  \dRs[+] [PATTERN]      list replication subscriptions
+  \ds[S+] [MODELO]       lista sequÛncias
+  \dt[S+] [MODELO]       lista tabelas
+  \dT[S+] [MODELO]       lista tipos de dados
+  \du[S+] [MODELO]       lista roles
+  \dv[S+] [MODELO]       lista vis§es
+  \dx[+]  [MODELO]       lista extens§es
+  \dX     [PATTERN]      list extended statistics
+  \dy[+]  [PATTERN]      list event triggers
+  \l[+]   [MODELO]       lista bancos de dados
+  \sf[+]  NOMEFUNÃ├O     edita a definiþÒo da funþÒo
+  \sv[+]  NOMEVIS├O      edita a definiþÒo da visÒo
+  \z[S]   [PATTERN]      same as \dp
+
+Objetos Grandes
+  \lo_export LOBOID FILE write large object to file
+  \lo_import FILE [COMMENT]
+                         read large object from file
+  \lo_list[+]            list large objects
+  \lo_unlink LOBOID      delete a large object
+
+FormataþÒo
+  \a                     alterna entre modo de saÝda desalinhado e alinhado
+  \C [TEXTO]             define o tÝtulo da tabela, ou apaga caso nada seja especificado
+  \f [TEXTO]             mostra ou define separador de campos para saÝda de consulta desalinhada
+  \H                     alterna para modo de saÝda em HTML (atual desabilitado)
+  \pset [NAME [VALUE]]   set table output option
+                         (border|columns|csv_fieldsep|expanded|fieldsep|
+                         fieldsep_zero|footer|format|linestyle|null|
+                         numericlocale|pager|pager_min_lines|recordsep|
+                         recordsep_zero|tableattr|title|tuples_only|
+                         unicode_border_linestyle|unicode_column_linestyle|
+                         unicode_header_linestyle)
+  \t [on|off]            mostra somente registros (atual desabilitado)
+  \T [TEXTO]             define atributos do marcador HTML <table> ou apaga caso nada seja especificado
+  \x [on|off|auto]       alterna para saÝda expandida (atual desabilitado)
+
+ConexÒo
+  \c[onnect] {[NOMEBD|- USU┴RIO|- M┴QUINA|- PORTA|-] | conninfo}
+                         conecta a um novo banco de dados (atualmente "postgres")
+  \conninfo              mostra informaþÒo sobre conexÒo atual
+  \encoding [CODIFICAÃ├O] mostra ou define codificaþÒo do cliente
+  \password [USU┴RIO]    altera a senha de um usußrio com seguranþa
+
+Sistema Operacional
+  \cd [DIRETËRIO]        muda o diret¾rio de trabalho atual
+  \getenv PSQLVAR ENVVAR fetch environment variable
+  \setenv NOME [VALOR]   define ou apaga varißvel de ambiente
+  \timing [on|off]       alterna para duraþÒo da execuþÒo de comandos (atualmente desabilitado)
+  \! [COMANDO]           executa comando na shell ou inicia shell interativa
+
+Varißveis
+  \prompt [TEXTO] NOME   pergunta o usußrio ao definir uma varißvel interna
+  \set [NOME [VALOR]]    define varißvel interna ou lista todos caso nÒo tenha parÔmetros
+  \unset NOME            apaga (exclui) varißvel interna
