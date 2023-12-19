@@ -55,3 +55,4 @@ Ivp4 & Ipv6 de `scram-sha-256` para `trust`:
 * Entre em propriedades do servidor `PostgreSQL16`, na interface gráfica, e altere a porta também para `5433` para se conectar com o servidor através do `PGAdmin`.
   ***
 
+--
